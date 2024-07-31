@@ -7,7 +7,7 @@ import com.mydemoproject.mappertask.entity.Student;
 public class StudentMapper {
 
     public static Student mapToStudentEntity(StudentRequest studentRequest) {
-        Student student = Student.builder()
+        return Student.builder()
                 .id(studentRequest.getId())
                 .name(studentRequest.getName())
                 .surname(studentRequest.getSurname())
@@ -16,12 +16,11 @@ public class StudentMapper {
                 .dateOfBirth(studentRequest.getDateOfBirth())
                 .build();
 
-        return student;
     }
 
     public static StudentResponse mapToStudentResponse(Student student) {
 
-        StudentResponse studentResponse = StudentResponse.builder()
+        return StudentResponse.builder()
                 .id(student.getId())
                 .name(student.getName())
                 .surname(student.getSurname())
@@ -30,7 +29,6 @@ public class StudentMapper {
                 .dateOfBirth(student.getDateOfBirth())
                 .build();
 
-        return studentResponse;
 
     }
 }
